@@ -52,7 +52,7 @@ async def channel_monitor():
                     'User-Agent': ua.random
                 }
                 await asyncio.sleep(18)
-                async with session.get(f"https://www.youtube.com/feeds/videos.xml?channel_id={channel_ids[chan_id]}", headers=HEADERS) as r:
+                async with session.get(f"https://www.youtube.com/feeds/videos.xml?channel_id=UC1a9-WEm2mX60ZEPhKEwQqA", headers=HEADERS) as r:
                     soup = BeautifulSoup(await r.text(), "lxml")  # grabs the entire html response
 
                     for entry in soup.find_all("entry"):
